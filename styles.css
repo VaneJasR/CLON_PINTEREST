@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header img {
+    width: 4%;
+    margin-right: 10px;
+}
+
+#navbar-pinterest {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: white;
+    z-index: 2;
+    width: 100%;
+}
+
+.logo {
+    height: 40%;
+    display: block;
+    position: static;
+    align-content: flex-start;
+}
+
+/* Estilo de la lista de navegación */
+.navigation-menu {
+    list-style: none;
+    /* Elimina los bullets de la lista */
+    padding: 0;
+    /* Elimina el padding por defecto */
+    margin: 0;
+    /* Elimina el margen por defecto */
+    display: flex;
+    /* Muestra los elementos de la lista en línea */
+    justify-content: center;
+    /* Centra los elementos de la lista */
+}
+
+/* Estilo de cada elemento de la lista */
+.navigation-menu li {
+    margin: 0 10px;
+    /* Espacio entre los elementos de la lista */
+}
+
+/* Estilo de los enlaces */
+.navigation-menu a {
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: rgb(0, 0, 0);
+    /* Color del texto de los enlaces */
+    font-weight: bold;
+    /* Hace el texto de los enlaces en negrita */
+}
+
+a img.logo {
+    width: 25px;
+    align-items: center;
+}
+
+/* Estilo de los enlaces al pasar el mouse */
+.navigation-menu a:hover {
+    color: red;
+    /* Cambia el color al pasar el mouse */
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.search-bar input[type="text"] {
+    border: none;
+    border-radius: 15px;
+    padding: 15px;
+    margin-right: -1px;
+    background-color: rgb(235, 234, 234);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Agrega transiciones para suavizar el cambio */
+}
+
+.search-bar input[type="text"]:hover {
+    background-color: #c6c6c6; /* Un color ligeramente más claro para el hover */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Una sombra suave para resaltar el input */
+}
+
+input[type="text"] {
+    width: 100%;
+    /* O ajusta a tu preferencia */
+    padding: 10px;
+    /* Añade algo de espacio interno para que el texto no esté pegado a los bordes */
+    text-align: center;
+    /* Centra el texto */
+}
+
+.finder {
+    /* Estilos específicos para el campo de búsqueda */
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 20px;
+    width: 100%;
+    /* Agrega aquí cualquier otro estilo que desees para el campo de búsqueda */
+}
+
+.icon {
+    height: 50%;
+    margin-left: 10px;
+    border-radius: 50%;
+}
+
+#content {
+    background-color: lightgrey;
+    padding: 15px;
+    /* Elimina el padding para que no haya espacio alrededor de los bordes del contenedor */
+    padding-top: 65px;
+    column-count: 3;
+    column-gap: 4px;
+    display: inline-block;
+}
+
+.card-image {
+    border-radius: 30px;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+    object-fit: contain;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image:hover .overlay-content {
+    display: flex;
+    /* O "block", según lo que contenga */
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+}
+
+.card-image .btn {
+    display: none;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    margin: 7px;
+    padding: 5px;
+    border-radius: 30%;
+    color: white;
+    background-color: red;
+    object-fit: contain;
+    /* Otros estilos para tus botones (color, tamaño, etc.) */
+    cursor: pointer;
+}
+
+.card-image .btn2 {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    right: 5px;
+    padding: 5px;
+    margin: 7px;
+    border-radius: 30%;
+    color: white;
+    background-color: red;
+    /* Otros estilos para tus botones (color, tamaño, etc.) */
+    cursor: pointer;
+}
+
+.card-image:hover .btn2,
+.card-image:hover .btn {
+    display: flex;
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.icon-wrapper {
+    margin: 0 8px; /* Espaciado horizontal entre íconos */
+    display: flex; /* Asegura que los íconos se alineen correctamente en filas y columnas */
+    align-items: center; /* Centra los íconos verticalmente dentro del wrapper */
+    justify-content: center; /* Centra los íconos horizontalmente dentro del wrapper */
+  }
+  
+  .icon-wrapper img {
+    display: block; /* Elimina cualquier espacio extra debajo de la imagen */
+    width: auto; /* Mantiene el tamaño original de la imagen */
+    height: 24px; /* Ajusta la altura de los íconos si es necesario */
+    cursor: pointer; /* Cambia el cursor a un puntero al pasar por encima del ícono */
+  }
+  
+  .icon-wrapper:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Efecto de fondo al pasar el ratón por encima */
+    border-radius: 10px; /* Redondea las esquinas del fondo al pasar el ratón por encima */
+  }
+  
+
+
+.card-image:hover img {
+    filter: brightness(50%);
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 425px) {
+    #content {
+        justify-content: center;
+    }
+
+    .card-image {
+        overflow: hidden;
+        border-radius: 50px;
+        width: 100%;
+    }
+
+    .card-image img {
+        max-width: 50%;
+        height: 50%;
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {.navigation-menu {
+        display: none; /* oculta la navegación en pantallas pequeñas */
+    }
+    /* otros ajustes para pantallas pequeñas */
+}
+
+
+@media screen and (max-width: 1440px) {}
+
+@media screen and (max-width: 2560px) {}
